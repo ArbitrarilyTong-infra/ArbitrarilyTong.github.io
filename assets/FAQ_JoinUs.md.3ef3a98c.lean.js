@@ -1,1 +1,0 @@
-import{_ as e,o as a,c as t,O as r}from"./chunks/framework.1973d67d.js";const f=JSON.parse('{"title":"如何加入任意桐？","description":"","frontmatter":{},"headers":[],"relativePath":"FAQ/JoinUs.md","filePath":"FAQ/JoinUs.md"}'),l={name:"FAQ/JoinUs.md"},i=r("",8),o=[i];function n(s,c,_,d,h,p){return a(),t("div",null,o)}const m=e(l,[["render",n]]);export{f as __pageData,m as default};
