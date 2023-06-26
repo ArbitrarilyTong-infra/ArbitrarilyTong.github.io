@@ -15,5 +15,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "ant-design-vue": "4.0.0-rc.5"
   }
 }
