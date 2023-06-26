@@ -1,19 +1,21 @@
 import { defineConfig } from "vitepress";
 
+// 引入导航栏和侧边栏设置
 import nav from "./config/nav";
 import sidebar from "./config/sidebar";
 
-// https://vitepress.dev/reference/site-config
+// 默认设置
 export default defineConfig({
   title: "ArbitrarilyTong",
   description: "ArbitrarilyTong UI",
   themeConfig: {
+    // 网站标志
     logo: "/favicon.png",
-    // https://vitepress.dev/reference/default-theme-config
+    // 导航栏
     nav,
-
+    // 侧边导引
     sidebar,
-
+    // 社交平台账号
     socialLinks: [
       {
         icon: "github",
@@ -30,9 +32,26 @@ export default defineConfig({
         link: "https://twitter.com/Ninni_kiri_jp",
       },
     ],
+    // 编辑文档链接
+    editLink: {
+      pattern:
+        "https://github.com/ArbitrarilyTong/ArbitrarilyTong.github.io/edit/main/ArbitrarilyTong/:path",
+      text: "在 Github 上编辑此文件",
+    },
+    // 搜索
+    search: {
+      provider: "local",
+    },
+    // 版权设置
+    footer: {
+      message: '由RealLanta发起 | RespectOWl设计',
+      copyright: 'Copyright © 2023 ArbitrarilyTong'
+    }
   },
   // Head 部分设置
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
   ],
+  // 最后编辑时间显示
+  lastUpdated: true,
 });

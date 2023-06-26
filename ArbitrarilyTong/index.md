@@ -18,7 +18,7 @@ hero:
       link: /FAQ
 
 features:
-  - title: android
+  - title: android<Badge type="info">custom element</Badge>
     details: 测试测试测试测试
     link: www.baidu.com
     linkText: 仓库地址
