@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "vitepress": "1.0.0-beta.3",
+    "vue": "^3.3.4"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev ArbitrarilyTong",
+    "docs:build": "vitepress build ArbitrarilyTong",
+    "docs:preview": "vitepress preview ArbitrarilyTong",
+    "commit": "cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
