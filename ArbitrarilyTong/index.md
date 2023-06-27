@@ -4,14 +4,14 @@ layout: home
 
 hero:
   name: "ArbitrarilyTong"
-  text: "ArbitrarilyTong UI"
+  text: "Let's make our ideas come true."
   tagline: Based on crDroid. Coming soon ......
   image:
-    src: https://avatars.githubusercontent.com/u/134734108?s=400&u=dd8ce7794e04a989106fe7542166312e7816dbd5&v=4
+    src: https://arbitrarilytong.win/img/yellowicon.png
     alt: ArbitrarilyTong
   actions:
     - theme: brand
-      text: 开发导引
+      text: 开发文档
       link: /Guide/
     - theme: alt
       text: 常见问题

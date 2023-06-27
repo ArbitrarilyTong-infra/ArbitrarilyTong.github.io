@@ -13,7 +13,10 @@ const sidebarConfig: DefaultTheme.Sidebar = {
   "/FAQ/": [
     {
       text: "常见问题",
-      items: [{ text: "简介", link: "/FAQ/" }],
+      items: [
+        { text: "简介", link: "/FAQ/" },
+        { text:"加入我们", link:"/FAQ/JoinUs" }
+    ],
     },
   ],
   "/Guide/": [
