@@ -44,3 +44,4 @@ jobs:
         with:
           folder: ArbitrarilyTong/.vitepress/dist
           branch: gh-pages
+          cname: arbitrarilytong.win
