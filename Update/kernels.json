@@ -1,0 +1,18 @@
+[
+  {
+    "tag": "v20230615.110",
+    "filename": "Thyme-KernelSU-Proton",
+    "toolchain": "Proton",
+    "size": 25301914,
+    "desc": "测试",
+    "url": "https://github.com/easterNday/Thyme-Kernel-Builder/releases/tag/v20230629.110"
+  },
+  {
+    "tag": "v20230615.110",
+    "filename": "Thyme-KernelSU-Proton",
+    "toolchain": "Proton",
+    "size": 25301914,
+    "desc": "",
+    "url": "https://github.com/easterNday/Thyme-Kernel-Builder/releases/tag/v20230629.110"
+  }
+]
