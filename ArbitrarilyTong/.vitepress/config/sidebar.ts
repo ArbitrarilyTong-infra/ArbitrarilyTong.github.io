@@ -22,7 +22,10 @@ const sidebarConfig: DefaultTheme.Sidebar = {
   "/Guide/": [
     {
       text: "开发指南",
-      items: [{ text: "前言", link: "/Guide/" }],
+      items: [
+        { text: "前言", link: "/Guide/" },
+        { text: "REPO 使用指北", link: "/Guide/how-to-fuck-up-repo"}
+      ],
     },
   ],
 };
