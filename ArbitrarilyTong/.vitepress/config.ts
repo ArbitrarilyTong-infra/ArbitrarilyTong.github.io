@@ -51,6 +51,12 @@ export default defineConfig({
   // Head 部分设置
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+    [
+      "script",
+      {
+        src: "https://img.js.design/assets/Resources/xframe/latest/jsframe.js"
+      }
+    ]
   ],
   // 最后编辑时间显示
   lastUpdated: true,
