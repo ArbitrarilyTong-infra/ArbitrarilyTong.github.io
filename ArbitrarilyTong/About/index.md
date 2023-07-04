@@ -28,6 +28,9 @@ const { isDark } = useData()
     <a-timeline-item>
       开始转移至crDroid作为系统底层 2023-06-23
     </a-timeline-item>
+    <a-timeline-item>
+      由于各种原因携带部分crDroid功能转移回LineageOS作为系统底层 2023-07-04
+    </a-timeline-item>
 </a-timeline>
 </a-config-provider>
 
