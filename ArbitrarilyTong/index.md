@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "ArbitrarilyTong"
   text: "Let's make our ideas come true."
-  tagline: Based on crDroid. Coming soon ......
+  tagline: Based on LineageOS. Coming soon ......
   image:
     src: https://arbitrarilytong.win/img/yellowicon.png
     alt: ArbitrarilyTong
