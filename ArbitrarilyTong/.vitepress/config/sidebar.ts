@@ -28,6 +28,15 @@ const sidebarConfig: DefaultTheme.Sidebar = {
       ],
     },
   ],
+  "/Download/": [
+    {
+      text: "ROM下载",
+      items: [
+        { text: "小米10S (thyme)", link: "/Download/thyme"},
+        { text: "Essential Phone PH-1 (mata)", link: "/Download/mata"}
+      ],
+    },
+  ],
 };
 
 export default sidebarConfig;

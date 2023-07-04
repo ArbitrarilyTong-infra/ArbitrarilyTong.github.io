@@ -7,39 +7,11 @@ hero:
   text: "设备列表"
 features:
   - title: 小米10S
-    details: 测试测试测试测试
-    link: www.baidu.com
+    details: 设备代号 thyme
+    link: ./thyme
     linkText: 下载地址
-  - title: 小米10S
-    details: 测试测试测试测试
-    link: www.baidu.com
-    linkText: 下载地址
-  - title: 小米10S
-    details: 测试测试测试测试
-    link: www.baidu.com
-    linkText: 下载地址
-  - title: 小米10S
-    details: 测试测试测试测试
-    link: www.baidu.com
-    linkText: 下载地址
-  - title: 小米10S
-    details: 测试测试测试测试
-    link: www.baidu.com
-    linkText: 下载地址
-  - title: 小米10S
-    details: 测试测试测试测试
-    link: www.baidu.com
-    linkText: 下载地址
-  - title: 小米10S
-    details: 测试测试测试测试
-    link: www.baidu.com
-    linkText: 下载地址
-  - title: 小米10S
-    details: 测试测试测试测试
-    link: www.baidu.com
-    linkText: 下载地址
-  - title: 小米10S
-    details: 测试测试测试测试
-    link: www.baidu.com
+  - title: Essential Phone PH-1
+    details: 设备代号 mata
+    link: ./mata
     linkText: 下载地址
 ---
