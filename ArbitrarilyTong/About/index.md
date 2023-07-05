@@ -2,7 +2,7 @@
 
 你好，世界！
 
-ArbitrarilyTong<Badge type="info">任意桐</Badge> 是一个基于 `crDroid` 的类原生 Android ROM。
+ArbitrarilyTong<Badge type="info">任意桐</Badge> 是一个基于 `LineageOS` 的类原生 Android ROM。
 
 <script setup>
   import { theme } from 'ant-design-vue';import { useData } from 'vitepress'
