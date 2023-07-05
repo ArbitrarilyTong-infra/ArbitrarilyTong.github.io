@@ -1,0 +1,21 @@
+name: Sync Update Info
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
+
+      - name: Run Python script
+        working-directory: Updater
+        run: python update_sync.py # 替换为你的 Python 脚本路径
