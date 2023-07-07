@@ -86,7 +86,7 @@ def get_repo_release_info(repo_owner, repo_name, mode_type, device_name):
         for release in releases:
             release_name = release['name']
             release_files = get_release_files(release)
-            download_list.append(generate_release_dict(
+            download_list.extend(generate_release_dict(
                 release_files, release_name, mode_type, device_name))
 
     return download_list
