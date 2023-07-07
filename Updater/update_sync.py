@@ -55,7 +55,7 @@ def generate_kernel_release_dict(file_info, release_name, device_name: str, rele
         return None
     tag = "KernelSU" if "KERNELSU" in name else "Original"
     return {
-        "datetime": str(datetime.strptime(file_info["updated_at"], '%Y-%m-%dT%H:%M:%SZ')),
+        "datetime": datetime.strptime(file_info["updated_at"], '%Y-%m-%dT%H:%M:%SZ').timestamp(),
         "filename": name,
         "id": file_info["id"],
         "tag": tag,
@@ -69,7 +69,7 @@ def generate_kernel_release_dict(file_info, release_name, device_name: str, rele
 # TODO
 def generate_system_release_dict(file_info, release_name):
     return {
-        "datetime": str(datetime.strptime(file_info["updated_at"], '%Y-%m-%dT%H:%M:%SZ')),
+        "datetime": datetime.strptime(file_info["updated_at"], '%Y-%m-%dT%H:%M:%SZ').timestamp(),
         "filename": file_info["name"],
         "id": file_info["id"],
         "tag": "Tong",
