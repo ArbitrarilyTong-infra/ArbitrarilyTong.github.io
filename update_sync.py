@@ -42,7 +42,7 @@ def generate_release_dict(release_files, release_name, mode_type, device_name):
     for file_info in release_files:
         if mode_type == "kernel":
             release_infos.append(generate_kernel_release_dict(file_info, release_name, device_name))
-        else:
+        elif mode_type == "system":
             release_infos.append(generate_system_release_dict(file_info, mode_type))
     return release_infos
 
@@ -52,7 +52,7 @@ def generate_kernel_release_dict(file_info, release_name, device_name: str):
     # filter device
     if device_name.lower() not in name.lower():
         return None
-    tag = "KernelSU" if "kernelsu" in name else "Original"
+    tag = "KernelSU" if "KERNELSU" in name else "Original"
     return {
         "datetime": str(datetime.strptime(file_info["updated_at"], '%Y-%m-%dT%H:%M:%SZ')),
         "filename": name,
@@ -99,21 +99,22 @@ def generate_save_path(mode_type, device_name):
     combine_path = os.path.join(combine_path, mode_type + ".json")
     return combine_path
 
+def generate(owner,repo,mode_type,device_name):
+    save_path = generate_save_path(mode_type, device_name)
+    download_list = get_repo_release_info(owner, repo, mode_type, device_name)
+    with open(save_path, "w", encoding='utf-8') as f:
+        json.dump(download_list, f, indent=2, sort_keys=True, ensure_ascii=False)
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print("Please provide the repository author and name as command line arguments.")
-    else:
-
-        repo_arg = sys.argv[1]  # template: <owner or org>/<repo name>
-        mode = sys.argv[2]  # option: kernel, system
-        device = sys.argv[3]  # option: kernel, system
-
-        owner, repo = repo_arg.split('/')
-
-        save_path = generate_save_path(mode, device)
-
-        download_list = get_repo_release_info(owner, repo, mode, device)
-        with open(save_path, "w", encoding='utf-8') as f:
-            json.dump(download_list, f, indent=2,
-                      sort_keys=True, ensure_ascii=False)
+    # Opening JSON file 
+    with open('sync.json',) as f:
+        sync_list = json.load(f)
+        for device,repo_list in sync_list.items():
+            # For kernel
+            if repo_list["kernel_repo"]:
+                owner, repo = repo_list["kernel_repo"].split('/')
+                generate(owner,repo,"kernel",device)
+            # For system
+            if repo_list["system_repo"]:
+                owner, repo = repo_list["system_repo"].split('/')
+                generate(owner,repo,"system",device)
