@@ -1,6 +1,7 @@
 [
   {
     "datetime": "2023-07-07 07:13:48",
+    "desc": "**Full Changelog**: https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/commits/v20230707.2",
     "filename": "THYME-KERNELSU_20230707",
     "id": 115940736,
     "size": 25300846,
@@ -10,6 +11,7 @@
   },
   {
     "datetime": "2023-07-07 07:26:21",
+    "desc": "**Full Changelog**: https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/commits/v20230707.2",
     "filename": "THYME-ORIGINAL_20230707",
     "id": 115941818,
     "size": 24352708,
@@ -19,6 +21,7 @@
   },
   {
     "datetime": "2023-07-05 09:32:28",
+    "desc": "**Full Changelog**: https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/commits/v20230705.1",
     "filename": "THYME-KERNELSU_20230705",
     "id": 115644069,
     "size": 25301655,
@@ -28,6 +31,7 @@
   },
   {
     "datetime": "2023-07-05 09:45:18",
+    "desc": "**Full Changelog**: https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/commits/v20230705.1",
     "filename": "THYME-ORIGINAL_20230705",
     "id": 115645778,
     "size": 24357917,

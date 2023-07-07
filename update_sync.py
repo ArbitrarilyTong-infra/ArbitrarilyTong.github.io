@@ -31,23 +31,24 @@ def get_releases(repo_owner, repo_name):
 
 def get_release_files(release):
     release_files_url = release['assets_url']
-    return check_and_return(release_files_url)
+    release_body = release['body']
+    return check_and_return(release_files_url),release_body
 
 
-def generate_release_dict(release_files, release_name, mode_type, device_name):
+def generate_release_dict(release_files, release_name, mode_type, device_name, release_desc):
     if release_files is None:
         return
 
     release_infos = []
     for file_info in release_files:
         if mode_type == "kernel":
-            release_infos.append(generate_kernel_release_dict(file_info, release_name, device_name))
+            release_infos.append(generate_kernel_release_dict(file_info, release_name, device_name, release_desc))
         elif mode_type == "system":
             release_infos.append(generate_system_release_dict(file_info, mode_type))
     return release_infos
 
 
-def generate_kernel_release_dict(file_info, release_name, device_name: str):
+def generate_kernel_release_dict(file_info, release_name, device_name: str, release_desc):
     name = str(file_info["name"]).replace(".zip", "").upper()
     # filter device
     if device_name.lower() not in name.lower():
@@ -60,7 +61,8 @@ def generate_kernel_release_dict(file_info, release_name, device_name: str):
         "tag": tag,
         "size": file_info["size"],
         "url": file_info['browser_download_url'],
-        "version": release_name
+        "version": release_name,
+        "desc": release_desc
     }
 
 
@@ -85,9 +87,9 @@ def get_repo_release_info(repo_owner, repo_name, mode_type, device_name):
     if releases is not None:
         for release in releases:
             release_name = release['name']
-            release_files = get_release_files(release)
+            release_files, release_desc = get_release_files(release)
             download_list.extend(generate_release_dict(
-                release_files, release_name, mode_type, device_name))
+                release_files, release_name, mode_type, device_name, release_desc))
 
     return download_list
 
