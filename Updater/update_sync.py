@@ -34,22 +34,25 @@ def get_release_files(release):
     return check_and_return(release_files_url)
 
 
-def generate_release_dict(release_files, release_name, mode_type):
+def generate_release_dict(release_files, release_name, mode_type, device_name):
     if release_files is None:
         return
 
     release_infos = []
     for file_info in release_files:
-        release_info = generate_kernel_release_dict(file_info,
-                                                    release_name) if mode_type == "kernel" else generate_system_release_dict(
-            file_info, mode_type)
-        release_infos.append(release_info)
+        if mode_type == "kernel":
+            release_infos.append(generate_kernel_release_dict(file_info, release_name, device_name))
+        elif mode_type == "system":
+            release_infos.append(generate_system_release_dict(file_info, mode_type))
     return release_infos
 
 
-def generate_kernel_release_dict(file_info, release_name):
-    name = str(file_info["name"])
-    tag = "KernelSU" if "kernelsu" in name else "Original"
+def generate_kernel_release_dict(file_info, release_name, device_name: str):
+    name = str(file_info["name"]).replace(".zip", "").upper()
+    # filter device
+    if device_name.lower() not in name.lower():
+        return None
+    tag = "KernelSU" if "KERNELSU" in name else "Original"
     return {
         "datetime": str(datetime.strptime(file_info["updated_at"], '%Y-%m-%dT%H:%M:%SZ')),
         "filename": name,
@@ -74,7 +77,7 @@ def generate_system_release_dict(file_info, release_name):
     }
 
 
-def get_repo_release_info(repo_owner, repo_name, mode_type):
+def get_repo_release_info(repo_owner, repo_name, mode_type, device_name):
     releases = get_releases(repo_owner, repo_name)
 
     download_list = []
@@ -83,32 +86,35 @@ def get_repo_release_info(repo_owner, repo_name, mode_type):
         for release in releases:
             release_name = release['name']
             release_files = get_release_files(release)
-            download_list.append(generate_release_dict(release_files, release_name, mode_type))
+            download_list.append(generate_release_dict(
+                release_files, release_name, mode_type, device_name))
 
     return download_list
 
 
 def generate_save_path(mode_type, device_name):
     root_dir = os.getcwd()
-    combine_path = os.path.join(root_dir, mode_type, device_name)
+    combine_path = os.path.join(root_dir, device_name)
     os.makedirs(combine_path, exist_ok=True)  # mkdir -p
     combine_path = os.path.join(combine_path, mode_type + ".json")
     return combine_path
 
+def generate(owner,repo,mode_type,device_name):
+    save_path = generate_save_path(mode_type, device_name)
+    download_list = get_repo_release_info(owner, repo, mode_type, device_name)
+    with open(save_path, "w", encoding='utf-8') as f:
+        json.dump(download_list, f, indent=2, sort_keys=True, ensure_ascii=False)
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print("Please provide the repository author and name as command line arguments.")
-    else:
-
-        repo_arg = sys.argv[1]  # template: <owner or org>/<repo name>
-        mode = sys.argv[2]  # option: kernel, system
-        device = sys.argv[3]  # option: kernel, system
-
-        owner, repo = repo_arg.split('/')
-
-        save_path = generate_save_path(mode, device)
-
-        download_list = get_repo_release_info(owner, repo, mode)
-        with open(save_path, "w", encoding='utf-8') as f:
-            json.dump(download_list, f, indent=2, sort_keys=True, ensure_ascii=False)  # 写为多行
+    # Opening JSON file 
+    with open('sync.json',) as f:
+        sync_list = json.load(f)
+        for device,repo_list in sync_list.items():
+            # For kernel
+            if repo_list["kernel_repo"]:
+                owner, repo = repo_list["kernel_repo"].split('/')
+                generate(owner,repo,"kernel",device)
+            # For system
+            if repo_list["system_repo"]:
+                owner, repo = repo_list["system_repo"].split('/')
+                generate(owner,repo,"system",device)

@@ -2,20 +2,37 @@ name: Sync Update Info
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "Updater/**"
+  schedule:
+    - cron: "0 14 * * *"
 
 jobs:
   run_script:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
+      - name: ⛓️ Check out code
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: 🔐 Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.11
 
-      - name: Run Python script
+      - name: 🔒 Install prerequisites
         working-directory: Updater
-        run: python update_sync.py # 替换为你的 Python 脚本路径
+        run: pip install -r requirements.txt
+
+      - name: 🔓 Generate update info
+        working-directory: Updater
+        run: python update_sync.py
+
+      - name: 🚔 Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: Update
+          FOLDER: Updater
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
