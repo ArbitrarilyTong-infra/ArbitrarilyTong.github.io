@@ -1,7 +1,7 @@
 [
   {
     "datetime": 1688714028.0,
-    "desc": "**Full Changelog**: https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/commits/v20230707.2",
+    "desc": "- 更新了KernelSU内核版本\r\n- 原版没有变更",
     "filename": "THYME-KERNELSU_20230707",
     "id": 115940736,
     "size": 25300846,
@@ -11,7 +11,7 @@
   },
   {
     "datetime": 1688714781.0,
-    "desc": "**Full Changelog**: https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/commits/v20230707.2",
+    "desc": "- 更新了KernelSU内核版本\r\n- 原版没有变更",
     "filename": "THYME-ORIGINAL_20230707",
     "id": 115941818,
     "size": 24352708,
@@ -21,7 +21,7 @@
   },
   {
     "datetime": 1688549548.0,
-    "desc": "**Full Changelog**: https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/commits/v20230705.1",
+    "desc": "- 第一版构建",
     "filename": "THYME-KERNELSU_20230705",
     "id": 115644069,
     "size": 25301655,
@@ -31,7 +31,7 @@
   },
   {
     "datetime": 1688550318.0,
-    "desc": "**Full Changelog**: https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/commits/v20230705.1",
+    "desc": "- 第一版构建",
     "filename": "THYME-ORIGINAL_20230705",
     "id": 115645778,
     "size": 24357917,
