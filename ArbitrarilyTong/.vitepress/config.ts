@@ -19,7 +19,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/ArbitrarilyTong/ArbitrarilyTong.github.io",
+        link: "https://github.com/ArbitrarilyTong",
       },
       {
         icon: {
@@ -35,7 +35,7 @@ export default defineConfig({
     // 编辑文档链接
     editLink: {
       pattern:
-        "https://github.com/ArbitrarilyTong/ArbitrarilyTong.github.io/edit/main/ArbitrarilyTong/:path",
+        "https://github.com/ArbitrarilyTong-infra/ArbitrarilyTong.github.io/edit/main/ArbitrarilyTong/:path",
       text: "在 Github 上编辑此文件",
     },
     // 搜索
