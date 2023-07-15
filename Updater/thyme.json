@@ -1,0 +1,68 @@
+[
+  {
+    "datetime": 1688685228.0,
+    "desc": "- 更新了KernelSU内核版本\r\n- 原版没有变更",
+    "filename": "thyme-kernelsu",
+    "id": 115940736,
+    "size": 25300846,
+    "tag": "kernelsu",
+    "type": "kernel",
+    "url": "https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/releases/download/v20230707.2/thyme-kernelsu_20230707.zip",
+    "version": "v20230707.2"
+  },
+  {
+    "datetime": 1688685981.0,
+    "desc": "- 更新了KernelSU内核版本\r\n- 原版没有变更",
+    "filename": "thyme-original",
+    "id": 115941818,
+    "size": 24352708,
+    "tag": "original",
+    "type": "kernel",
+    "url": "https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/releases/download/v20230707.2/thyme-original_20230707.zip",
+    "version": "v20230707.2"
+  },
+  {
+    "datetime": 1688520748.0,
+    "desc": "- 第一版构建",
+    "filename": "thyme-kernelsu",
+    "id": 115644069,
+    "size": 25301655,
+    "tag": "kernelsu",
+    "type": "kernel",
+    "url": "https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/releases/download/v20230705.1/thyme-kernelsu_20230705.zip",
+    "version": "v20230705.1"
+  },
+  {
+    "datetime": 1688521518.0,
+    "desc": "- 第一版构建",
+    "filename": "thyme-original",
+    "id": 115645778,
+    "size": 24357917,
+    "tag": "original",
+    "type": "kernel",
+    "url": "https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/releases/download/v20230705.1/thyme-original_20230705.zip",
+    "version": "v20230705.1"
+  },
+  {
+    "datetime": 1689374279.0,
+    "desc": "",
+    "filename": "ArbitrarilyTong-2.0.0",
+    "id": 117109574,
+    "size": 1642814097,
+    "tag": "UNOFFICIAL",
+    "type": "system",
+    "url": "https://github.com/ArbitrarilyTong-Devices/device_xiaomi_thyme/releases/download/Test/ArbitrarilyTong-2.0.0-20230713-UNOFFICIAL-thyme.zip",
+    "version": "20230713@ArbitrarilyTong-Test"
+  },
+  {
+    "datetime": 1689374903.0,
+    "desc": "",
+    "filename": "ArbitrarilyTong-2.0.0",
+    "id": 117110322,
+    "size": 1642814097,
+    "tag": "UNOFFICIAL",
+    "type": "system",
+    "url": "https://github.com/ArbitrarilyTong-Devices/device_xiaomi_thyme/releases/download/Test/ArbitrarilyTong-2.0.0-20230714-UNOFFICIAL-thyme.zip",
+    "version": "20230714@ArbitrarilyTong-Test"
+  }
+]

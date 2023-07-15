@@ -1,6 +1,6 @@
 {
   "thyme": {
     "kernel_repo": "ArbitrarilyTong-Devices/Android-Kernel-Builder",
-    "system_repo": ""
+    "system_repo": "ArbitrarilyTong-Devices/device_xiaomi_thyme"
   }
 }
