@@ -1,5 +1,27 @@
 [
   {
+    "datetime": 1688714028.0,
+    "desc": "- 更新了KernelSU内核版本\r\n- 原版没有变更",
+    "filename": "thyme-kernelsu",
+    "id": 115940736,
+    "size": 25300846,
+    "tag": "kernelsu",
+    "type": "kernel",
+    "url": "https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/releases/download/v20230707.2/thyme-kernelsu_20230707.zip",
+    "version": "v20230707.2"
+  },
+  {
+    "datetime": 1688714781.0,
+    "desc": "- 更新了KernelSU内核版本\r\n- 原版没有变更",
+    "filename": "thyme-original",
+    "id": 115941818,
+    "size": 24352708,
+    "tag": "original",
+    "type": "kernel",
+    "url": "https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/releases/download/v20230707.2/thyme-original_20230707.zip",
+    "version": "v20230707.2"
+  },
+  {
     "datetime": 1688549548.0,
     "desc": "- 第一版构建",
     "filename": "thyme-kernelsu",
