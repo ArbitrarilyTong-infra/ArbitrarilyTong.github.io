@@ -42,5 +42,27 @@
     "type": "kernel",
     "url": "https://github.com/ArbitrarilyTong-Devices/Android-Kernel-Builder/releases/download/v20230705.1/thyme-original_20230705.zip",
     "version": "v20230705.1"
+  },
+  {
+    "datetime": 1689403079.0,
+    "desc": "",
+    "filename": "ArbitrarilyTong-2.0.0",
+    "id": 117109574,
+    "size": 1642814097,
+    "tag": "UNOFFICIAL",
+    "type": "system",
+    "url": "https://github.com/ArbitrarilyTong-Devices/device_xiaomi_thyme/releases/download/Test/ArbitrarilyTong-2.0.0-20230713-UNOFFICIAL-thyme.zip",
+    "version": "20230713@ArbitrarilyTong-Test"
+  },
+  {
+    "datetime": 1689403703.0,
+    "desc": "",
+    "filename": "ArbitrarilyTong-2.0.0",
+    "id": 117110322,
+    "size": 1642814097,
+    "tag": "UNOFFICIAL",
+    "type": "system",
+    "url": "https://github.com/ArbitrarilyTong-Devices/device_xiaomi_thyme/releases/download/Test/ArbitrarilyTong-2.0.0-20230714-UNOFFICIAL-thyme.zip",
+    "version": "20230714@ArbitrarilyTong-Test"
   }
 ]
